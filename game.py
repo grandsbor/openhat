@@ -11,6 +11,10 @@ class Game():
         self.started = False
         self.rounds = 0
 
+    @staticmethod
+    def init(self, dict_path):
+        pass
+
     def add_player(self, player):
         if player.id in self.players:
             return False
@@ -28,6 +32,9 @@ class Game():
                 yield (people[i], people[(i + j) % n])
         """
 
+    def next_word(self, player):
+        return ""
+
     def start(self, args):
         if self.started:
             raise Exception("Игра уже началась")
@@ -42,3 +49,5 @@ class Game():
 
     def finish(self):
         self.started = False
+        stats = {}
+        return stats
